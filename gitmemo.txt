@@ -12,5 +12,8 @@ gitのユーザー設定
 ・「git commit」:プッシュされたファイルをコミットする
 　・「git commit -m "メッセージ"」でメッセージ（変更箇所など）を残しながらコミットできる
 
+・「git branch -M main」:"main"という新しいブランチを作成する（mainじゃなくてもいい）
+
+・「git fetch origin」:フェッチする
 その他
 ・「git log」:変更履歴などを確認
