@@ -3,7 +3,7 @@ gitのユーザー設定
 ・「git config --global user.email ○○○」:メールアドレスを設定
 
 リモートリポジトリ関連
-・「git remote add origin (URL)」:リモートリポジトリを登録
+・「git remote add origin (URL)」:リモートリポジトリを"origin"という名で登録
 
 ローカルリポジトリ関連
 ・「git init」:今いるディレクトリをローカルリポジトリとして初期化
@@ -11,9 +11,23 @@ gitのユーザー設定
 ※「git config --global --add safe.directory ディレクトリの絶対パス」を実行して安全性を証明しないといけないのかも
 ・「git commit」:プッシュされたファイルをコミットする
 　・「git commit -m "メッセージ"」でメッセージ（変更箇所など）を残しながらコミットできる
+・「git push origin main」:"main"というブランチから"origin"へとプッシュする
 
 ・「git branch -M main」:"main"という新しいブランチを作成する（mainじゃなくてもいい）
 
 ・「git fetch origin」:フェッチする
 その他
 ・「git log」:変更履歴などを確認
+
+
+【最低限の流れ】
+（作業開始前）
+　「git fetch origin」：リモートリポジトリをフェッチして、最新状況を把握する
+→「git pull 」:（ローカルリポジトリでの変更が全てリモートリポジトリに反映されているなら）リモートリポジトリの状況をローカルリポジトリに反映させる
+　「git merge」:（リモートリポジトリに反映されていないものがあるなら）プッシュしてからマージする
+
+（作業終了後）
+　「git add ファイル名」:変更・追加したファイルをコミット前状態にする
+→「git commit」:変更・追加したファイルをコミットする
+　※「git commit -m "メッセージ"」でメッセージを残しておくとわかりやすい
+→「git push origin main」:
