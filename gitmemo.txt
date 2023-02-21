@@ -1,0 +1,16 @@
+gitのユーザー設定
+・「git config --global user.name ○○○」:ユーザー名を設定
+・「git config --global user.email ○○○」:メールアドレスを設定
+
+リモートリポジトリ関連
+・「git remote add origin (URL)」:リモートリポジトリを登録
+
+ローカルリポジトリ関連
+・「git init」:今いるディレクトリをローカルリポジトリとして初期化
+・「git add ファイル名」:ファイルをリポジトリのインデックス（コミット前の状態）に登録する
+※「git config --global --add safe.directory ディレクトリの絶対パス」を実行して安全性を証明しないといけないのかも
+・「git commit」:プッシュされたファイルをコミットする
+　・「git commit -m "メッセージ"」でメッセージ（変更箇所など）を残しながらコミットできる
+
+その他
+・「git log」:変更履歴などを確認
